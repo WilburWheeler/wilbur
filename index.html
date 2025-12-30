@@ -18,8 +18,6 @@
         .media-card.tall { aspect-ratio: 9/16; grid-row: span 2; }
         .media-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .hub-btn { background: #a855f7; border: none; color: #000; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: 900; text-transform: uppercase; font-size: 0.7rem; margin-top: 15px; transition: 0.3s; }
-        .day-tile { background: #111; padding: 20px; border-radius: 12px; width: 130px; text-align: center; border: 1px solid transparent; }
-        .active-p { background: rgba(168, 85, 247, 0.05); border-top: 3px solid #a855f7; }
         @media (max-width: 768px) { .media-card.tall { aspect-ratio: 16/9; grid-row: span 1; } }
     </style>
 </head>
@@ -29,7 +27,6 @@
         <a href="#home">Home</a>
         <a href="#action">Action</a>
         <a href="#tech">The Setup</a>
-        <a href="#training">Training</a>
         <a href="#stats">Stats</a>
     </nav>
 
@@ -42,19 +39,19 @@
         <h2 style="font-size: 3rem; margin-bottom: 40px; text-transform: uppercase; width: 100%; max-width: 1200px;">Live <span class="accent-purple">Action</span></h2>
         <div class="grid-container">
             <div class="media-card tall">
-                <img src="VideoCapture_20251115-110159 (1).jpg" alt="Wilbur Action 1">
+                <img src="VideoCapture_20251115-110159%20(1).jpg" alt="Action Shot 1">
             </div>
             
             <div class="media-card">
-                <img src="IMG-20251115-WA0028 (1).jpg" alt="Wilbur CX">
+                <img src="IMG-20251115-WA0028%20(1).jpg" alt="Cyclocross">
             </div>
             
             <div class="media-card">
-                <img src="IMG-20251115-WA0026 (1).jpg" alt="Wilbur Action 2">
+                <img src="IMG-20251115-WA0026%20(1).jpg" alt="Action Shot 2">
             </div>
             
             <div class="media-card">
-                <img src="BIKE.jpeg" alt="Wilbur MTB">
+                <img src="BIKE.jpeg" alt="The Bike">
             </div>
         </div>
     </section>
@@ -62,24 +59,40 @@
     <section id="tech" style="background: #050505;">
         <div style="width: 100%; max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 3.5rem; text-transform: uppercase; margin-bottom: 50px;">The <span class="accent-purple">Setup</span></h2>
-            <div style="border-bottom: 1px solid #222; padding: 40px 0;">
-                <p style="font-size: 1.5rem; font-weight: 900; text-transform: uppercase;">Sram Eagle 90 T-Type Transmission</p>
-                <p style="color: #888; font-style: italic;">"Eagle 90 allows me to shift effortlessly underload."</p>
+            
+            <div style="border-bottom: 1px solid #222; padding: 30px 0;">
+                <p style="font-size: 1.2rem; font-weight: 900; color: #a855f7; margin: 0;">DRIVETRAIN</p>
+                <p style="font-size: 1.5rem; font-weight: 900; margin: 10px 0;">Sram Eagle 90 T-Type</p>
+                <p style="color: #888; font-style: italic;">"Eagle 90 allows me to shift effortlessly underload while not having to worry about the faff of charging batteries"</p>
             </div>
-            <div style="padding: 40px 0;">
-                <p style="font-size: 1.5rem; font-weight: 900; text-transform: uppercase;">Hope Pro 5 Rear Hub</p>
-                <audio id="hubSound"><source src="Hope Pro 5 hub sound.mp3" type="audio/mpeg"></audio>
+
+            <div style="border-bottom: 1px solid #222; padding: 30px 0;">
+                <p style="font-size: 1.2rem; font-weight: 900; color: #a855f7; margin: 0;">FRAME</p>
+                <p style="font-size: 1.5rem; font-weight: 900; margin: 10px 0;">Isobow Technology</p>
+                <p style="color: #888; font-style: italic;">"Isobow is great!, it adds comfort of a full suspension while keeping the maneuverability of a hardtail"</p>
+            </div>
+
+            <div style="padding: 30px 0;">
+                <p style="font-size: 1.2rem; font-weight: 900; color: #a855f7; margin: 0;">WHEELSET</p>
+                <p style="font-size: 1.5rem; font-weight: 900; margin: 10px 0;">Hope Pro 5 Rear Hub</p>
+                <p style="color: #888; font-style: italic;">"The Pro 5 hub is great with an amazing 108 POE for a fast start"</p>
+                <audio id="hubSound"><source src="Hope%20Pro%205%20hub%20sound.mp3" type="audio/mpeg"></audio>
                 <button class="hub-btn" onclick="document.getElementById('hubSound').play()">🔊 Hear the Buzz</button>
             </div>
         </div>
     </section>
 
-    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('IMG-20251115-WA0026 (1).jpg'); background-size: cover; background-position: center;">
+    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('IMG-20251115-WA0026%20(1).jpg'); background-size: cover; background-position: center;">
         <div style="text-align: center;">
             <h2 style="font-size: 4rem; color: #FC4C02; font-weight: 900; margin: 0;">STRAVA</h2>
-            <a href="https://www.strava.com/athletes/79647436" target="_blank" style="background: #FC4C02; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: 900; display: inline-block; margin-top: 20px;">VIEW PROFILE</a>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Tracking every watt and every climb.</p>
+            <a href="https://www.strava.com/athletes/79647436" target="_blank" style="background: #FC4C02; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: 900; display: inline-block; letter-spacing: 2px;">VIEW PROFILE</a>
         </div>
     </section>
+
+    <footer style="padding: 40px; text-align: center; background: #050505; font-size: 0.7rem; color: #444; letter-spacing: 3px; border-top: 1px solid #111;">
+        © 2025 WILBUR WHEELER // HHYCC ELITE
+    </footer>
 
 </body>
 </html>
