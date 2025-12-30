@@ -66,23 +66,25 @@
         <h2 style="font-size: 3rem; margin-bottom: 40px; text-transform: uppercase; width: 100%; max-width: 1200px;">Live <span class="accent-purple">Action</span></h2>
         <div class="grid-container">
             <div class="media-card tall">
-                <video autoplay muted loop playsinline preload="auto">
+                <video id="vid1" autoplay muted loop playsinline preload="auto">
+                    <source src="20251102_135848.mp4" type="video/mp4">
                     <source src="video1.mp4" type="video/mp4">
                 </video>
             </div>
             
             <div class="media-card">
-                <img src="mud-photo.jpg" alt="Wilbur CX">
+                 <img src="IMG-20251115-WA0028 (1).jpg" alt="Wilbur CX">
             </div>
             
             <div class="media-card">
-                <video autoplay muted loop playsinline preload="auto">
+                <video id="vid2" autoplay muted loop playsinline preload="auto">
+                     <source src="20251115_110415.mp4" type="video/mp4">
                     <source src="video2.mp4" type="video/mp4">
                 </video>
             </div>
             
             <div class="media-card">
-                <img src="jump-photo.jpg" alt="Wilbur MTB">
+                 <img src="VideoCapture_20251115-110159 (1).jpg" alt="Wilbur MTB">
             </div>
         </div>
     </section>
@@ -130,7 +132,7 @@
                 </div>
                 <div class="part-quote">"The Pro 5 hub is great with an amazing 108 POE (Points Of Engagement) for a fast start"</div>
                 
-                <audio id="hubSound"><source src="hub.mp3" type="audio/mpeg"></audio>
+                <audio id="hubSound"><source src="Hope Pro 5 hub sound.mp3" type="audio/mpeg"></audio>
                 <button class="hub-btn" onclick="document.getElementById('hubSound').play()">🔊 Hear the Buzz</button>
             </div>
         </div>
@@ -149,7 +151,7 @@
         </div>
     </section>
 
-    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('strava-bg.jpg'); background-size: cover; background-position: center;">
+    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('IMG-20251115-WA0026 (1).jpg'); background-size: cover; background-position: center;">
         <div style="text-align: center;">
             <h2 style="font-size: 4rem; color: #FC4C02; font-weight: 900; margin: 0;">STRAVA</h2>
             <p style="font-size: 1.2rem; margin: 20px 0;">Tracking every watt and every climb.</p>
@@ -160,16 +162,20 @@
     <footer style="padding: 50px; text-align: center; background: #050505; font-size: 0.7rem; color: #444; letter-spacing: 3px; border-top: 1px solid #111;">
         © 2025 WILBUR WHEELER // HHYCC ELITE
     </footer>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const vids = document.querySelectorAll('video');
             vids.forEach(vid => {
-                vid.muted = true;
                 const playPromise = vid.play();
                 if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        console.log("Auto-play prevented");
+                    playPromise.then(_ => {
+                        // Autoplay started!
+                    }).catch(error => {
+                        // Autoplay was prevented.
+                        console.log("Autoplay blocked, attempting mute fix.");
+                        vid.muted = true;
+                        vid.play();
                     });
                 }
             });
