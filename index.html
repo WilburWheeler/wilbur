@@ -17,7 +17,7 @@
         nav a { color: #FFF; text-decoration: none; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; transition: 0.3s; }
         nav a:hover { opacity: 1; color: #a855f7; }
 
-        /* TECH LIST STYLES */
+        /* TECH LIST */
         .tech-container { width: 100%; max-width: 900px; margin: 0 auto; }
         .tech-item { border-bottom: 1px solid #222; padding: 40px 0; transition: 0.3s; }
         .tech-item:hover { border-bottom-color: #a855f7; }
@@ -28,16 +28,23 @@
 
         /* MEDIA CARDS */
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; max-width: 1200px; }
-        .media-card { background: #111; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); position: relative; }
+        .media-card { background: #111; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); position: relative; aspect-ratio: 16/9; }
+        .media-card.tall { aspect-ratio: 9/16; grid-row: span 2; }
         .media-card img, .media-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
         
+        /* HUB BUTTON */
         .hub-btn { background: #a855f7; border: none; color: #000; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: 900; text-transform: uppercase; font-size: 0.7rem; margin-top: 15px; transition: 0.3s; }
         .hub-btn:hover { background: #fff; transform: scale(1.05); }
 
-        /* DAY TILES */
+        /* SCHEDULE TILES */
         .day-tile { background: #111; padding: 20px; border-radius: 12px; width: 130px; text-align: center; border: 1px solid transparent; }
         .active-p { background: rgba(168, 85, 247, 0.05); border-top: 3px solid #a855f7; }
         .active-o { background: rgba(255, 102, 0, 0.05); border-top: 3px solid #ff6600; }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .media-card.tall { aspect-ratio: 16/9; grid-row: span 1; }
+        }
     </style>
 </head>
 <body>
@@ -58,17 +65,24 @@
     <section id="action" style="background: #080808;">
         <h2 style="font-size: 3rem; margin-bottom: 40px; text-transform: uppercase; width: 100%; max-width: 1200px;">Live <span class="accent-purple">Action</span></h2>
         <div class="grid-container">
-            <div class="media-card" style="grid-row: span 2;">
-                <video autoplay muted loop playsinline><source src="20251102_135848.mp4" type="video/mp4"></video>
+            <div class="media-card tall">
+                <video autoplay muted loop playsinline preload="auto">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
             </div>
+            
             <div class="media-card">
-                <img src="IMG-20251115-WA0028 (1).jpg">
+                <img src="mud-photo.jpg" alt="Wilbur CX">
             </div>
+            
             <div class="media-card">
-                <video autoplay muted loop playsinline><source src="20251115_110415.mp4" type="video/mp4"></video>
+                <video autoplay muted loop playsinline preload="auto">
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
             </div>
-             <div class="media-card">
-                <img src="VideoCapture_20251115-110159 (1).jpg">
+            
+            <div class="media-card">
+                <img src="jump-photo.jpg" alt="Wilbur MTB">
             </div>
         </div>
     </section>
@@ -79,7 +93,7 @@
             
             <div class="tech-item">
                 <div class="tech-header">
-                    <span class="part-name">Sram Eagle 90 T-Type</span>
+                    <span class="part-name">Sram Eagle 90 T-Type Transmission</span>
                     <span class="part-category">Drivetrain</span>
                 </div>
                 <div class="part-quote">"Eagle 90 allows me to shift effortlessly underload while not having to worry about the faff of charging batteries"</div>
@@ -115,7 +129,8 @@
                     <span class="part-category">Wheelset</span>
                 </div>
                 <div class="part-quote">"The Pro 5 hub is great with an amazing 108 POE (Points Of Engagement) for a fast start"</div>
-                <audio id="hubSound"><source src="Hope Pro 5 hub sound.mp3" type="audio/mpeg"></audio>
+                
+                <audio id="hubSound"><source src="hub.mp3" type="audio/mpeg"></audio>
                 <button class="hub-btn" onclick="document.getElementById('hubSound').play()">🔊 Hear the Buzz</button>
             </div>
         </div>
@@ -134,11 +149,11 @@
         </div>
     </section>
 
-    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('IMG-20251115-WA0026 (1).jpg'); background-size: cover; background-position: center;">
+    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('strava-bg.jpg'); background-size: cover; background-position: center;">
         <div style="text-align: center;">
             <h2 style="font-size: 4rem; color: #FC4C02; font-weight: 900; margin: 0;">STRAVA</h2>
             <p style="font-size: 1.2rem; margin: 20px 0;">Tracking every watt and every climb.</p>
-            <a href="https://www.strava.com/athletes/79647436" target="_blank" style="background: #FC4C02; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: 900; display: inline-block; letter-spacing: 2px; box-shadow: 0 10px 30px rgba(252, 76, 2, 0.4);">VIEW PROFILE</a>
+            <a href="https://www.strava.com/athletes/79647436" target="_blank" style="background: #FC4C02; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: 900; display: inline-block; letter-spacing: 2px;">VIEW PROFILE</a>
         </div>
     </section>
 
