@@ -160,6 +160,21 @@
     <footer style="padding: 50px; text-align: center; background: #050505; font-size: 0.7rem; color: #444; letter-spacing: 3px; border-top: 1px solid #111;">
         © 2025 WILBUR WHEELER // HHYCC ELITE
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const vids = document.querySelectorAll('video');
+            vids.forEach(vid => {
+                vid.muted = true;
+                const playPromise = vid.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Auto-play prevented");
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
