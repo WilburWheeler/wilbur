@@ -6,45 +6,21 @@
     <title>Wilbur Wheeler | HHYCC Elite</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* CORE STYLES */
         body, html { margin: 0; padding: 0; width: 100%; background: #050505; color: #FFF; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
         section { min-height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 80px 10%; box-sizing: border-box; position: relative; }
         .accent-purple { color: #a855f7; }
         .accent-orange { color: #ff6600; }
-
-        /* NAV */
         nav { position: fixed; top: 0; width: 100%; padding: 20px; z-index: 100; display: flex; justify-content: center; gap: 20px; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); }
         nav a { color: #FFF; text-decoration: none; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; transition: 0.3s; }
         nav a:hover { opacity: 1; color: #a855f7; }
-
-        /* TECH LIST */
-        .tech-container { width: 100%; max-width: 900px; margin: 0 auto; }
-        .tech-item { border-bottom: 1px solid #222; padding: 40px 0; transition: 0.3s; }
-        .tech-item:hover { border-bottom-color: #a855f7; }
-        .tech-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
-        .part-name { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; }
-        .part-category { font-size: 0.7rem; font-weight: 900; color: #a855f7; letter-spacing: 2px; text-transform: uppercase; }
-        .part-quote { font-size: 1.1rem; line-height: 1.6; color: #888; font-style: italic; max-width: 700px; }
-
-        /* MEDIA CARDS */
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; max-width: 1200px; }
         .media-card { background: #111; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); position: relative; aspect-ratio: 16/9; }
         .media-card.tall { aspect-ratio: 9/16; grid-row: span 2; }
         .media-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        
-        /* HUB BUTTON */
         .hub-btn { background: #a855f7; border: none; color: #000; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: 900; text-transform: uppercase; font-size: 0.7rem; margin-top: 15px; transition: 0.3s; }
-        .hub-btn:hover { background: #fff; transform: scale(1.05); }
-
-        /* SCHEDULE TILES */
         .day-tile { background: #111; padding: 20px; border-radius: 12px; width: 130px; text-align: center; border: 1px solid transparent; }
         .active-p { background: rgba(168, 85, 247, 0.05); border-top: 3px solid #a855f7; }
-        .active-o { background: rgba(255, 102, 0, 0.05); border-top: 3px solid #ff6600; }
-        
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .media-card.tall { aspect-ratio: 16/9; grid-row: span 1; }
-        }
+        @media (max-width: 768px) { .media-card.tall { aspect-ratio: 16/9; grid-row: span 1; } }
     </style>
 </head>
 <body>
@@ -78,84 +54,32 @@
             </div>
             
             <div class="media-card">
-                <img src="VideoCapture_20251115-110159 (1).jpg" alt="Wilbur MTB">
+                <img src="BIKE.jpeg" alt="Wilbur MTB">
             </div>
         </div>
     </section>
 
     <section id="tech" style="background: #050505;">
-        <div class="tech-container">
+        <div style="width: 100%; max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 3.5rem; text-transform: uppercase; margin-bottom: 50px;">The <span class="accent-purple">Setup</span></h2>
-            
-            <div class="tech-item">
-                <div class="tech-header">
-                    <span class="part-name">Sram Eagle 90 T-Type Transmission</span>
-                    <span class="part-category">Drivetrain</span>
-                </div>
-                <div class="part-quote">"Eagle 90 allows me to shift effortlessly underload while not having to worry about the faff of charging batteries"</div>
+            <div style="border-bottom: 1px solid #222; padding: 40px 0;">
+                <p style="font-size: 1.5rem; font-weight: 900; text-transform: uppercase;">Sram Eagle 90 T-Type Transmission</p>
+                <p style="color: #888; font-style: italic;">"Eagle 90 allows me to shift effortlessly underload."</p>
             </div>
-
-            <div class="tech-item">
-                <div class="tech-header">
-                    <span class="part-name">Isobow Technology</span>
-                    <span class="part-category">Frame Tech</span>
-                </div>
-                <div class="part-quote">"Isobow is great!, it adds comfort of a full suspension while keeping the maneuverability of a hardtail"</div>
-            </div>
-
-            <div class="tech-item">
-                <div class="tech-header">
-                    <span class="part-name">TAG T1 Carbon Bars</span>
-                    <span class="part-category">Cockpit</span>
-                </div>
-                <div class="part-quote">"These bars are great, the stop my fingers feeling sore after a long race by soaking up all the vibrations"</div>
-            </div>
-
-            <div class="tech-item">
-                <div class="tech-header">
-                    <span class="part-name">Fidlock bottle system</span>
-                    <span class="part-category">Hydration</span>
-                </div>
-                <div class="part-quote">"Fidlock gives me the ability to chuck my bottle on to the cage effortlessly while also allowing me to easily shoulder the bike when training"</div>
-            </div>
-
-            <div class="tech-item" style="border-bottom: none;">
-                <div class="tech-header">
-                    <span class="part-name">Hope Pro 5 Rear Hub</span>
-                    <span class="part-category">Wheelset</span>
-                </div>
-                <div class="part-quote">"The Pro 5 hub is great with an amazing 108 POE (Points Of Engagement) for a fast start"</div>
-                
+            <div style="padding: 40px 0;">
+                <p style="font-size: 1.5rem; font-weight: 900; text-transform: uppercase;">Hope Pro 5 Rear Hub</p>
                 <audio id="hubSound"><source src="Hope Pro 5 hub sound.mp3" type="audio/mpeg"></audio>
                 <button class="hub-btn" onclick="document.getElementById('hubSound').play()">🔊 Hear the Buzz</button>
             </div>
         </div>
     </section>
 
-    <section id="training" style="background: #0a0a0a;">
-        <h2 style="font-size: 3rem; text-transform: uppercase; margin-bottom: 40px;">The <span class="accent-orange">Grind</span></h2>
-        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-             <div class="day-tile">MON<br><small>1HR MTB</small></div>
-             <div class="day-tile active-p">TUE<br><small>TRACK/CX</small></div>
-             <div class="day-tile" style="opacity: 0.4;">WED<br><small>REST</small></div>
-             <div class="day-tile">THU<br><small>RUN/CX</small></div>
-             <div class="day-tile">FRI<br><small>CLIMB</small></div>
-             <div class="day-tile active-p">SAT<br><small>PARKRUN</small></div>
-             <div class="day-tile active-o">SUN<br><small>RACE</small></div>
-        </div>
-    </section>
-
-    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('IMG-20251115-WA0026 (1).jpg'); background-size: cover; background-position: center;">
+    <section id="stats" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('IMG-20251115-WA0026 (1).jpg'); background-size: cover; background-position: center;">
         <div style="text-align: center;">
             <h2 style="font-size: 4rem; color: #FC4C02; font-weight: 900; margin: 0;">STRAVA</h2>
-            <p style="font-size: 1.2rem; margin: 20px 0;">Tracking every watt and every climb.</p>
-            <a href="https://www.strava.com/athletes/79647436" target="_blank" style="background: #FC4C02; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: 900; display: inline-block; letter-spacing: 2px;">VIEW PROFILE</a>
+            <a href="https://www.strava.com/athletes/79647436" target="_blank" style="background: #FC4C02; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: 900; display: inline-block; margin-top: 20px;">VIEW PROFILE</a>
         </div>
     </section>
-
-    <footer style="padding: 50px; text-align: center; background: #050505; font-size: 0.7rem; color: #444; letter-spacing: 3px; border-top: 1px solid #111;">
-        © 2025 WILBUR WHEELER
-    </footer>
 
 </body>
 </html>
